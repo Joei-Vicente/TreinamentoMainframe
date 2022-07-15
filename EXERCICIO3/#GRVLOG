@@ -1,0 +1,9 @@
+                                                                        00010000
+       01 WRK-LOG.                                                      00020000
+          05 WRK-PROGRAMA     PIC X(08).                                00030000
+          05 WRK-SECTION      PIC X(04).                                00040000
+          05 WRK-MSG-ERRO     PIC X(30).                                00050000
+          05 WRK-STATUS       PIC X(02).                                00060000
+          05 FILLER           PIC X(14).                                00070000
+                                                                        00080000
+

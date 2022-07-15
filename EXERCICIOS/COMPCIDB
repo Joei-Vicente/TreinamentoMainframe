@@ -1,0 +1,21 @@
+//FOUR006X JOB 'COMP CICSDB2',MSGCLASS=X,CLASS=C,NOTIFY=&SYSUID         00010003
+//*-------------------------------------------------------------------* 00020000
+//*      JOB DE COMPILACAO DE PROGRAMA COBOL COM DB2 CICS USANDO MENU * 00030000
+//*      NAME     = SEU PROGRAMA                                        00031002
+//*      INSTR    = SEU USUARIO                                         00031002
+//*-----------------------------------------------------------------    00031002
+//*      PLAN,MEM = SEU PROGRAMA                                        00031002
+//*      PACKAGE  = SEU USUARIO - FOURXXX                               00031002
+//*-------------------------------------------------------------------* 00040000
+// JCLLIB ORDER=GR.GERAL.PROCLIB                                        00050007
+//COMPCIDB EXEC DFHCIDB2,NAME=F06CIP2,INSTR=FOUR006                     00060008
+//BIND.SYSTSIN  DD *                                                    00080000
+DSN  SYSTEM(DB8G)
+BIND PLAN(F06CIP2) MEM(F06CIP2) ACT(REP) ISOLATION(CS) -                00090004
+       LIB('DSN810.DBRMLIB.DATA')                                       00100000
+BIND PACKAGE(FOUR006) MEM(F06CIP2) ACT(REP) ISOLATION(CS) -             00090004
+       LIB('DSN810.DBRMLIB.DATA') VALIDATE(BIND)                        00100000
+
+                                                                        00100000
+END                                                                     00120000
+//*                                                                     00130000

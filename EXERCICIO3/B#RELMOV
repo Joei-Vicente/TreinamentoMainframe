@@ -1,0 +1,16 @@
+      ******************************************************************00001000
+      * BOOK DO ARQUIVO DE SAIDA DO RELATÓRIO DE CLIENTES COM SALDO    *00002000
+      * SUPERIOR A 10.000,00                                           *00003000
+      ******************************************************************00004000
+                                                                        00005000
+       01 REG-RELMOVA.                                                  00010000
+          05 REL-AGENCIA               PIC 9(04)    VALUE ZEROS.        00020000
+          05 FILLER                    PIC X(05)    VALUE SPACES.       00030000
+          05 REL-CONTA                 PIC 9(04)    VALUE ZEROS.        00040000
+          05 FILLER                    PIC X(05)    VALUE SPACES.       00050000
+          05 REL-NOME                  PIC X(30)    VALUE SPACES.       00070000
+          05 FILLER                    PIC X(05)    VALUE SPACES.       00080000
+          05 REL-SALDO                 PIC 9(06)V99 VALUE ZEROS.        00090000
+          05 FILLER                    PIC X(09)    VALUE SPACES.       00100000
+                                                                        00110000
+

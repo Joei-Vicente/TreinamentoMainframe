@@ -1,0 +1,64 @@
+F06CIM1 DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,TIOAPFX=YES, *00010011
+               MAPATTS=(COLOR)                                          00011011
+MAPTEST DFHMDI SIZE=(24,80)                                             00020003
+        DFHMDF POS=(1,28),                                             *00030011
+               LENGTH=30,                                              *00040011
+               ATTRB=ASKIP,                                            *00050003
+               INITIAL='+----------------------------+',COLOR=YELLOW    00060011
+        DFHMDF POS=(2,28),                                             *00070011
+               LENGTH=30,                                              *00080011
+               ATTRB=ASKIP,                                            *00090011
+               INITIAL='|   CONSULTA DE CLIENTES     |',COLOR=PINK      00100011
+        DFHMDF POS=(3,28),                                             *00110011
+               LENGTH=30,                                              *00120011
+               ATTRB=ASKIP,                                            *00130011
+               INITIAL='+----------------------------+',COLOR=YELLOW    00140011
+**********************************************************************  00141010
+        DFHMDF POS=(05,20),LENGTH=10,INITIAL='ID.......:',ATTRB=ASKIP, *00142011
+               COLOR=YELLOW                                             00142111
+ID      DFHMDF POS=(05,31),LENGTH=05,ATTRB=(UNPROT,IC,NUM),COLOR=RED    00143011
+        DFHMDF POS=(05,37),LENGTH=01,ATTRB=PROT                         00144009
+**********************************************************************  00144110
+        DFHMDF POS=(07,20),LENGTH=10,INITIAL='NOME.....:',ATTRB=ASKIP   00145005
+NOME    DFHMDF POS=(07,31),LENGTH=30,ATTRB=UNPROT                       00146007
+        DFHMDF POS=(07,62),LENGTH=1,ATTRB=PROT                          00147005
+**********************************************************************  00148010
+        DFHMDF POS=(09,20),LENGTH=10,INITIAL='SETOR....:',ATTRB=ASKIP   00149109
+SETOR   DFHMDF POS=(09,31),LENGTH=04,ATTRB=UNPROT,COLOR=RED             00149211
+        DFHMDF POS=(09,36),LENGTH=1,ATTRB=PROT                          00149309
+**********************************************************************  00149410
+        DFHMDF POS=(11,20),LENGTH=10,INITIAL='SALARIO..:',ATTRB=ASKIP   00149509
+SAL     DFHMDF POS=(11,31),LENGTH=10,ATTRB=(UNPROT,NUM),COLOR=RED,     *00149614
+               PICOUT='9(10)'                                           00149722
+*              PICOUT='9(10)',PICIN='9(10)'                             00149822
+        DFHMDF POS=(11,42),LENGTH=1,ATTRB=PROT                          00149922
+**********************************************************************  00150022
+        DFHMDF POS=(13,20),LENGTH=10,INITIAL='DATA ADM.:',ATTRB=ASKIP   00150122
+DATADIA DFHMDF POS=(13,31),LENGTH=02,ATTRB=UNPROT                       00150222
+        DFHMDF POS=(13,34),LENGTH=01,INITIAL='/',ATTRB=ASKIP            00150322
+DATAMES DFHMDF POS=(13,36),LENGTH=02,ATTRB=UNPROT                       00150422
+        DFHMDF POS=(13,39),LENGTH=01,INITIAL='/',ATTRB=ASKIP            00150522
+DATAANO DFHMDF POS=(13,41),LENGTH=04,ATTRB=UNPROT                       00150622
+        DFHMDF POS=(13,46),LENGTH=1,ATTRB=PROT                          00150722
+**********************************************************************  00150810
+        DFHMDF POS=(15,20),LENGTH=10,INITIAL='EMAIL....:',ATTRB=ASKIP   00150909
+EMAIL   DFHMDF POS=(15,31),LENGTH=40,ATTRB=UNPROT,COLOR=RED             00151011
+        DFHMDF POS=(15,72),LENGTH=1,ATTRB=PROT                          00151109
+**********************************************************************  00151210
+        DFHMDF POS=(19,10),LENGTH=10,INITIAL='MSG......:',ATTRB=ASKIP   00151313
+MSG     DFHMDF POS=(19,21),LENGTH=40,ATTRB=ASKIP,COLOR=PINK             00151513
+        DFHMDF POS=(19,62),LENGTH=1,ATTRB=PROT                          00151613
+**********************************************************************  00151713
+        DFHMDF POS=(22,05),LENGTH=10,INITIAL='F3-REFRESH',ATTRB=ASKIP, *00152223
+               COLOR=TURQUOISE                                          00152318
+        DFHMDF POS=(22,19),LENGTH=10,INITIAL='F5-INCLUIR',ATTRB=ASKIP, *00152523
+               COLOR=TURQUOISE                                          00152618
+        DFHMDF POS=(22,33),LENGTH=12,INITIAL='F6-CONSULTAR',           *00152723
+               ATTRB=ASKIP,COLOR=TURQUOISE                              00152823
+        DFHMDF POS=(22,49),LENGTH=10,INITIAL='F08-APAGAR',ATTRB=ASKIP, *00152923
+               COLOR=TURQUOISE                                          00153018
+        DFHMDF POS=(22,63),LENGTH=13,INITIAL='F09-ATUALIZAR',          *00153123
+               ATTRB=ASKIP,COLOR=TURQUOISE                              00153223
+**********************************************************************  00153423
+        DFHMSD TYPE=FINAL                                               00154018
+        END                                                             00160001

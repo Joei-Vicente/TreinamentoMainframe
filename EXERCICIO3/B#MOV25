@@ -1,0 +1,6 @@
+       01 REG-MOV2505-A.                                                00010000
+           05 AGENCIA                  PIC 9(04) VALUE ZEROS.           00020000
+           05 CONTA                    PIC 9(04) VALUE ZEROS.           00030000
+           05 NOME                     PIC X(30) VALUE SPACES.          00040000
+           05 SALDO                    PIC 9(08) VALUE ZEROS.           00050000
+

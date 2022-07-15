@@ -1,0 +1,6 @@
+//FOUR006X  JOB 'COMPCOB',CLASS=C,MSGCLASS=X,NOTIFY=&SYSUID,TIME=(0,01) 00010000
+//********************************************************************  00010103
+//* EXECUTAR PROGRAMA FOUR006X                                       *  00011003
+//********************************************************************  00012003
+//EXECUTA  EXEC PGM=FR06DB01
+//STEPLIB  DD   DSN=GR.GERAL.LOADLIB,DISP=SHR
